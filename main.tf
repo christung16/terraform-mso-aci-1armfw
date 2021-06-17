@@ -18,9 +18,9 @@ terraform {
 }
 
 provider "mso" {
-  username = var.mso_user.username
-  password = var.mso_user.password
-  url      = var.mso_user.url
+  username = var.mso_user
+  password = var.mso_password
+  url      = var.mso_url
   insecure = true
 }
 

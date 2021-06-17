@@ -1,12 +1,12 @@
 # AUTHOR(s): Chris Tung <yitung@cisco.com>
-
+/*
 mso_user = {
     username = "admin"
     password = "<password>"  // your MSO password
     url = "https://<MSO IP>"
 
 }
-
+*/
 aci_user = {
     username = "admin"
     password = "<password>"  // your ACI password
@@ -18,6 +18,7 @@ vcenter_user = {
     password = "<password>"   // your vCenter password
     url = "<VCenter IP>"        // Remark: no need https:// in the beginning
 }
+
 // Caveat: No "." in the name // Underlay config in APIC
 
 cdp = {
