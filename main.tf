@@ -75,8 +75,11 @@ resource "aci_vmm_credential" "vmm_cred" {
   vmm_domain_dn = aci_vmm_domain.vmm_domain[each.value.name].id
   name = format( "%s%s", each.value.name,"-credential")
   annotation = "orchestrator:terraform"
-  pwd = each.value.vcenter_pwd
-  usr = each.value.vcenter_usr
+#  pwd = each.value.vcenter_pwd
+  pwd = var.vcenter_user.password
+#  usr = each.value.vcenter_usr
+  usr = var.vcenter_user.username
+  
 }
 
 resource "aci_vmm_controller" "gen_com_ctrl" {
