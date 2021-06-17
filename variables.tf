@@ -1,8 +1,21 @@
 # AUTHOR(s): Chris Tung <yitung@cisco.com>
 
+/*
 variable "mso_user" {
   description = "Login Information"
   type = map(any)
+}
+*/
+variable "mso_user" {
+  type = string
+}
+
+variable "mso_password" {
+  type = string
+}
+
+variable "mso_url" {
+  type = string
 }
 
 variable "aci_user" {
