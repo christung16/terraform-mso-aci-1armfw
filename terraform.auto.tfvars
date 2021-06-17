@@ -1,23 +1,4 @@
 # AUTHOR(s): Chris Tung <yitung@cisco.com>
-/*
-mso_user = {
-    username = "admin"
-    password = "<password>"  // your MSO password
-    url = "https://<MSO IP>"
-
-}
-*/
-aci_user = {
-    username = "admin"
-    password = "C1sc0123"  // your ACI password
-    url = "https://10.74.202.71"
-}
-
-vcenter_user = {
-    username = "administrator@vsphere.local"
-    password = "C1sc0123"   // your vCenter password
-    url = "10.74.202.163"        // Remark: no need https:// in the beginning
-}
 
 // Caveat: No "." in the name // Underlay config in APIC
 
