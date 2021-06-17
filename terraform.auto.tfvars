@@ -117,7 +117,7 @@ sg = {
         port = 20
         site_nodes = [{
             site_name = "aci_site1"
-            tenant_name = "General_Company_Tenant"
+            tenant_name = "Onearmfirewall_Company_Tenant"
             node_name = "one-arm-fw"
             }
         ]
@@ -140,13 +140,13 @@ pbr = {
 
 // Overlay config in MSO
 
-template_name = "General_Company_Template"
-schema_name = "General_Company_Schema"
+template_name = "Onearmfirewall_Company_Template"
+schema_name = "Onearmfirewall_Company_Schema"
 mso_site = "aci-site1"
 
 
 tenant = {
-    name = "General_Company_Tenant"
+    name = "Onearmfirewall_Company_Tenant"
     description = "Tenant Created by Terraform"
 }
 
