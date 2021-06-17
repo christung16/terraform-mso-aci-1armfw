@@ -118,7 +118,7 @@ resource "aci_lldp_interface_policy" "lldp" {
 }
 
 module "accessportgroup" {
-  source = "../modules/accessportgroup"
+  source = "./modules/accessportgroup"
   for_each = var.access_port_group_policy
   name = each.value.name
   lldp_status = each.value.lldp_status
