@@ -4,39 +4,39 @@
 
 cdp = {
     cdp-enable = {
-        name = "1armfw_com_cdp_enable"
+        name = "onearmfw_com_cdp_enable"
         admin_st = "enabled"
     }
     cdp-disable = {
-        name = "1armfw_com_cdp_disable"
+        name = "onearmfw_com_cdp_disable"
         admin_st = "disabled"
     }
 }
 
 lldp = {
     lldp-enable = {
-        name = "1armfw_com_lldp_enable"
-        description = "1armfw_com_lldp_enable"
+        name = "onearmfw_com_lldp_enable"
+        description = "onearmfw_com_lldp_enable"
         admin_tx_st = "enabled"
         admin_rx_st = "enabled"
     }
     lldp-disable = {
-        name = "1armfw_com_lldp_disable"
-        description = "1armfw_com_lldp_disable"
+        name = "onearmfw_com_lldp_disable"
+        description = "onearmfw_com_lldp_disable"
         admin_tx_st = "disabled"
         admin_rx_st = "disabled"
     }
 }
 
 vlan_pool = {
-    1armfw_com_vlan_pool_1 = {
-        name = "1armfw_com_vlan_pool_1"
+    onearmfw_com_vlan_pool_1 = {
+        name = "onearmfw_com_vlan_pool_1"
         alloc_mode = "dynamic"
         from = "vlan-2001"
         to = "vlan-3000"
     }
-    1armfw_com_vlan_pool_2 = {
-        name = "1armfw_com_vlan_pool_2"
+    onearmfw_com_vlan_pool_2 = {
+        name = "onearmfw_com_vlan_pool_2"
         alloc_mode = "dynamic"
         from = "vlan-3001"
         to = "vlan-3900"
@@ -50,16 +50,16 @@ vlan_pool = {
 }
 
 vmm_vmware = {
-    1armfw_com_vswitch = {
+    onearmfw_com_vswitch = {
         provider_profile_dn = "uni/vmmp-VMware"
-        name = "1armfw_com_vswitch"
-        vlan_pool = "1armfw_com_vlan_pool_1"
+        name = "onearmfw_com_vswitch"
+        vlan_pool = "onearmfw_com_vlan_pool_1"
         vcenter_host_or_ip = "10.74.202.163"
         vcenter_datacenter_name = "ACI-Datacenter"
         dvs_version = "6.6"
-#        vcenter_usr = "administrator@vsphere.local"
-#        vcenter_pwd = "<password>"
-        aaep_name = "aaep_1armfw_com_vswitch" 
+        vcenter_usr = "administrator@vsphere.local"
+        vcenter_pwd = "<password>"
+        aaep_name = "aaep_onearmfw_com_vswitch" 
         esxi_hosts = [ "10.74.202.122" ]
 
     }
@@ -80,9 +80,9 @@ l3domain = {
 access_port_group_policy = {
     leaf_access_port_101_1_12_vmm_vcenter = {
         name = "leaf_access_port_101_1_12_vmm_vcenter"
-        lldp_status = "1armfw_com_lldp_disable"
-        cdp_status = "1armfw_com_cdp_enable"
-        aaep_name = "aaep_1armfw_com_vswitch"
+        lldp_status = "onearmfw_com_lldp_disable"
+        cdp_status = "onearmfw_com_cdp_enable"
+        aaep_name = "aaep_onearmfw_com_vswitch"
         leaf_profile = "leaf-101-Chris-profile"
         leaf_block = 101
         from_card = 1
@@ -92,8 +92,8 @@ access_port_group_policy = {
     }
     leaf_access_port_101_1_20_phydomain = {
         name = "leaf_access_port_101_1_20_phydomain"
-        lldp_status = "1armfw_com_lldp_disable"
-        cdp_status = "1armfw_com_cdp_enable"
+        lldp_status = "onearmfw_com_lldp_disable"
+        cdp_status = "onearmfw_com_cdp_enable"
         aaep_name = "aaep_asa_phydomain"
         leaf_profile = "leaf-101-Chris-profile"
         leaf_block = 101
@@ -186,7 +186,7 @@ epgs = {
         anp_name = "GENERAL_AP" 
         bd_name = "GENERAL_BD1"
         vrf_name = "GENERAL_VRF"
-        dn = "1armfw_com_vswitch"
+        dn = "onearmfw_com_vswitch"
     }
     DATABASE_EPG = {
         name = "DATABASE_EPG"
@@ -194,7 +194,7 @@ epgs = {
         anp_name = "GENERAL_AP" 
         bd_name = "GENERAL_BD1"
         vrf_name = "GENERAL_VRF"
-        dn = "1armfw_com_vswitch"
+        dn = "onearmfw_com_vswitch"
     }
 }
 
