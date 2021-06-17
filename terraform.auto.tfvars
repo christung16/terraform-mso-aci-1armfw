@@ -9,14 +9,14 @@ mso_user = {
 */
 aci_user = {
     username = "admin"
-    password = "<password>"  // your ACI password
-    url = "https://<APIC IP>"
+    password = "C1sc0123"  // your ACI password
+    url = "https://10.74.202.71"
 }
 
 vcenter_user = {
     username = "administrator@vsphere.local"
-    password = "<password>"   // your vCenter password
-    url = "<VCenter IP>"        // Remark: no need https:// in the beginning
+    password = "C1sc0123"   // your vCenter password
+    url = "10.74.202.163"        // Remark: no need https:// in the beginning
 }
 
 // Caveat: No "." in the name // Underlay config in APIC
@@ -73,7 +73,7 @@ vmm_vmware = {
         provider_profile_dn = "uni/vmmp-VMware"
         name = "gen_com_vswitch"
         vlan_pool = "gen_com_vlan_pool_1"
-        vcenter_host_or_ip = "<VCenter ip>"
+        vcenter_host_or_ip = "10.74.202.163"
         vcenter_datacenter_name = "ACI-Datacenter"
         dvs_version = "6.6"
         vcenter_usr = "administrator@vsphere.local"
